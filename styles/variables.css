@@ -2,3 +2,30 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --page-background-color: #000028;
+  --header-background-image: url(../images/cover-image-dark.png);
+  --heder-min-height: clamp(668px, calc(328.305px + 90.585vw), 1024px);
+  --font-size-header-footer: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --line-height-header-footer: 96px;
+  --header-padding: clamp(10px, 0.458px + 2.5445vw, 20px);
+  --text-font-size: 18px;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --card-title-color: #FF0070;
+  --card-subtitle-color: #000028;
+  --menu-hover-color: rgba(255, 0, 112, 0.4);
+  --rec-padding-left: clamp(304px, calc(-61.458px + 97.455vw), 687px);
+  --rec-padding-top: clamp(10px, 0.458px + 2.5445vw, 20px);
+  --menu-padding-top: clamp(65px, calc(-37.099px + 27.226vw), 172px);
+  --dot-padding-left: clamp(347px, calc(-22.222px + 98.459vw), 986px);
+  --dot-padding-top: clamp(18px, 8.458px + 2.5445vw, 28px);
+  --decorated-zone-bottom-padding-top: clamp(633px, calc(302.847px + 88.041vw), 979px);
+  --decorated-zone-bottom-padding-left: clamp(10px, calc(0.458px + 2.545vw), 20px);
+  --decorated-zone-top-padding-left: clamp(340px, calc(-29.222px + 98.459vw), 979px);
+  --decorated-zone-top-padding-top: clamp(10px, calc(0.458px + 2.545vw), 20px);
+  --main-padding-top-bottom: clamp(40px, calc(20.916px + 5.089vw), 60px);
+  --main-padding-left-right: clamp(10px, calc(0.458px + 2.545vw), 20px);
+  --card-padding: clamp(50px, calc(21.374px + 7.634vw), 80px);
+}
