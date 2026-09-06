@@ -151,7 +151,7 @@
   font-family: 'IBM Plex mono';
   font-weight: 700;
   font-size: var(--text-font-size);
-  line-height: 23.4px;
+  line-height: 23px;
   color: var(--card-title-color);
   padding-bottom: 20px;
 }
@@ -265,7 +265,7 @@
 
   .card {
     display: grid;
-    grid-template-columns: minmax(233px, 1fr) 1fr 1fr;
+    grid-template-columns: minmax(235px, 1fr) 1fr 1fr;
     gap: 20px;
   }
 
@@ -403,7 +403,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    letter-spacing: -0.5px;
   }
 
   .card__arrangement_of_elements_3 {
