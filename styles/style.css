@@ -112,6 +112,11 @@
   border-bottom: 1px solid var(--card-title-color);
 }
 
+.header__theme-title {
+  align-self: self-start;
+  padding-top: 10px;
+}
+
 .header__title {
   font-family: 'IBM Plex mono';
   font-weight: 700;
@@ -146,7 +151,7 @@
   font-family: 'IBM Plex mono';
   font-weight: 700;
   font-size: var(--text-font-size);
-  line-height: 23px;
+  line-height: 23.4px;
   color: var(--card-title-color);
   padding-bottom: 20px;
 }
@@ -165,15 +170,16 @@
   font-family: 'IBM Plex mono', 'sans-serif';
   font-weight: 400;
   font-size: var(--text-font-size);
-  line-height: 23px;
+  line-height: 23.44px;
   color: var(--text-color);
   padding-top: 10px;
+  text-align: left;
 }
 
 .card__images {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5 1fr);
+  grid-template-rows: 1fr;
   gap: 10px;
 }
 
@@ -229,7 +235,7 @@
   }
 
   .header {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr calc(50% - 10px);
     grid-template-rows: 1fr 1fr 1fr;
     padding: var(--header-padding) var(--header-padding) var(--header-padding) 0;
   }
@@ -254,12 +260,12 @@
     grid-column: 2;
     grid-row: 3;
     align-self: self-start;
-    padding-top: 50px;
+    padding-top: 49px;
   }
 
   .card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(233px, 1fr) 1fr 1fr;
     gap: 20px;
   }
 
@@ -280,7 +286,7 @@
 
   .card__images {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4 1fr);
+    grid-template-rows: 1fr;
     gap: 20px;
   }
 
@@ -333,7 +339,7 @@
 
   .header {
     height: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr calc(50% - 10px);
     grid-template-rows: 1fr 1fr 1fr;
     padding: var(--header-padding) var(--header-padding) var(--header-padding) 0;
   }
@@ -345,13 +351,11 @@
   .header__theme-menu {
     grid-column: 1 / span 2;
     grid-row: 1;
-  }
-
-  .header__theme-menu {
     justify-self: center;
     align-self: first baseline;
     padding-top: 0;
-}
+    padding-left: 10px;
+  }
 
   .header__theme-menu-list {
     display: flex;
@@ -373,7 +377,8 @@
   .header__description {
     grid-column: 2;
     grid-row: 3;
-    align-self: self-start;
+    letter-spacing: -0.2px;
+    padding-top: 60px;
   }
 
   .card {
@@ -395,7 +400,10 @@
   }
 
   .card__arrangement_of_elements_2 .card__text {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    letter-spacing: -0.5px;
   }
 
   .card__arrangement_of_elements_3 {
