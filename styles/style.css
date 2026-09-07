@@ -373,4 +373,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
     }
+
+    .section__title-decor {
+      padding-bottom: 0;
+    }
 }
