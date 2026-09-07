@@ -1,448 +1,376 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  background-image: var(--header-background-image);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--page-background-color);
+    background-image: var(--header-background-image);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--page-background-color);
 }
 
 .header {
-  height: 100vw;
-  min-height: var(--heder-min-height);
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-  padding: var(--header-padding) var(--header-padding);
+    height: 100vh;
+    min-height: var(--heder-min-height);
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    padding: var(--header-padding) var(--header-padding);
 }
 
 .header__decorated_rec {
-  position: absolute;
-  inset-inline-start: var(--rec-padding-left);
-  inset-block-start: var(--rec-padding-top);
-  font-family: 'IBM Plex mono';
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: left;
-  color: var(--accent-color);
+    position: absolute;
+    inset-inline-start: var(--rec-padding-left);
+    inset-block-start: var(--rec-padding-top);
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+    color: var(--accent-color);
 }
 
 .header__theme-menu::before {
-  display: inline-block;
-  content: '';
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  inset-inline-start: var(--dot-padding-left);
-  inset-block-start: var(--dot-padding-top);
-  border-radius: 50%;
-  background: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    inset-inline-start: var(--dot-padding-left);
+    inset-block-start: var(--dot-padding-top);
+    border-radius: 50%;
+    background: var(--accent-color);
+    box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
 .decorated-zone::before {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  inset-inline-start: var(--decorated-zone-bottom-padding-left);
-  inset-block-start: var(--decorated-zone-bottom-padding-top);
-  border-width: 0px 0px 1px 1px;
-  border-style: solid;
-  border-color: var(--card-title-color);
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    inset-inline-start: var(--decorated-zone-bottom-padding-left);
+    inset-block-start: var(--decorated-zone-bottom-padding-top);
+    border-width: 0px 0px 1px 1px;
+    border-style: solid;
+    border-color: var(--card-title-color);
 }
 
 .decorated-zone::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  inset-inline-start: var(--decorated-zone-top-padding-left);
-  inset-block-start: var(--decorated-zone-top-padding-top);
-  border-width: 1px 1px 0px 0px;
-  border-style: solid;
-  border-color: var(--card-title-color);
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    inset-inline-start: var(--decorated-zone-top-padding-left);
+    inset-block-start: var(--decorated-zone-top-padding-top);
+    border-width: 1px 1px 0px 0px;
+    border-style: solid;
+    border-color: var(--card-title-color);
 }
 
 .header__theme-menu {
-  justify-self: end;
-  align-self: first baseline;
-  padding-top: var(--menu-padding-top);
+    justify-self: end;
+    align-self: first baseline;
+    padding-top: var(--menu-padding-top);
 }
 
 .header__theme-menu-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  list-style-type: none;
-  inline-size: 70px;
-}
-
-.header__theme-menu-button {
-  width: 70px;
-  height: 26px;
-  font-family: 'IBM Plex mono';
-  font-weight: 400;
-  font-size: var(--text-font-size);
-  line-height: 18px;
-  color: var(--card-title-color);
-  text-transform: lowercase;
-  background-color: transparent;
-  border: 1px solid transparent;
-}
-
-.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
-  border-color: var(--menu-hover-color);
-}
-
-.header__theme-menu-button_active {
-  border-color: var(--card-title-color);
-}
-
-.header__theme-menu-item:has(:focus) .header__theme-menu-button {
-  outline: none;
-}
-
-.header__theme-menu-item:has(:focus-visible) .header__theme-menu-button {
-  border-bottom: 1px solid var(--card-title-color);
-}
-
-.header__theme-title {
-  align-self: self-start;
-  padding-top: 10px;
-}
-
-.header__title {
-  font-family: 'IBM Plex mono';
-  font-weight: 700;
-  font-size: var(--font-size-header-footer);
-  line-height: var(--line-height-header-footer);
-  color: var(--title-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
-}
-
-.subtitle-decor {
-  font-family: 'IBM Plex mono';
-  font-weight: 700;
-  font-size: var(--text-font-size);
-  line-height: 23px;
-  color: var(--card-subtitle-color);
-  background-color: var(--accent-color);
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--card-padding);
-  padding: var(--main-padding-top-bottom) var(--main-padding-left-right);
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-}
-
-.card__title-decor {
-  font-family: 'IBM Plex mono';
-  font-weight: 700;
-  font-size: var(--text-font-size);
-  line-height: 23px;
-  color: var(--card-title-color);
-  padding-bottom: 20px;
-}
-
-.card__text {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.title-decor-card {
-  font-weight: 400;
-}
-
-.card p {
-  font-family: 'IBM Plex mono', 'sans-serif';
-  font-weight: 400;
-  font-size: var(--text-font-size);
-  line-height: 23.44px;
-  color: var(--text-color);
-  padding-top: 10px;
-  text-align: left;
-}
-
-.card__images {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 10px;
-}
-
-.images {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: var(--heder-min-height);
-  position: relative;
-}
-
-.footer__title {
-  font-family: 'IBM Plex mono';
-  font-weight: 700;
-  font-size: var(--font-size-header-footer);
-  line-height: var(--line-height-header-footer);
-  color: var(--title-color);
-  text-shadow: 2px 2px 0px var(--accent-color);
-}
-
-.link {
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: 2px 2px 0px var(--accent-color);
-}
-
-.card:has(:focus) a {
-  outline: none;
-}
-
-.card:has(:focus-visible) a {
-  border: 1px solid #F1B2CE;
-}
-
-.link:hover {
-  border-bottom: 1px solid var(--accent-color);
-}
-
-@media (width >= 768px) {
-  :root {
-  --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --line-height-header-footer: 99px;
-  --rec-padding-left: clamp(687px, calc(-81px + 100vw), 943px);
-  --main-padding-top-bottom: 60px;
-  --main-padding-left-right: 20px;
-  --card-padding: 80px;
-  }
-
-  .header {
-    grid-template-columns: 1fr calc(50% - 10px);
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: var(--header-padding) var(--header-padding) var(--header-padding) 0;
-  }
-
-  .header__decorated_rec {
-    grid-column: 1 / span 2;
-  }
-
-  .header__theme-menu {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .header__theme-title {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    justify-self: left;
-    align-self: center;
-  }
-
-  .header__description {
-    grid-column: 2;
-    grid-row: 3;
-    align-self: self-start;
-    padding-top: 49px;
-  }
-
-  .card {
-    display: grid;
-    grid-template-columns: minmax(235px, 1fr) 1fr 1fr;
-    gap: 20px;
-  }
-
-  .card__title-decor {
-    padding-bottom: 0;
-  }
-  .card__arrangement_of_elements_1 {
-    grid-column: 2 / span 2;
-  }
-
-  .card__arrangement_of_elements_2 {
-    grid-column: 1 / span 3;
-  }
-
-  .card__arrangement_of_elements_3 {
-    grid-column: 2 / span 2;
-  }
-
-  .card__images {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
-  }
-
-  .title__arrangement {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-  }
-
-  .image__arrangement_nature {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-  }
-
-  .image__arrangement_food {
-    grid-column: 3;
-    grid-row: 2 / span 2;
-    object-fit: cover;
-  }
-
-  .image__arrangement_music {
-    grid-column: 1;
-    grid-row: 3 / span 2;
-    object-fit: cover;
-  }
-
-  .image__arrangement_walk {
-    grid-column: 2 / span 2;
-    grid-row: 4;
-  }
-
-  .image__arrangement_books {
-    grid-auto-flow: dense;
-  }
-}
-
-@media (width >= 1024px) {
-  :root {
-  --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --line-height-header-footer: 130px;
-  --heder-min-height: 768px;
-  --dot-padding-left: clamp(986px, calc(-97.077px + 105.769vw), 1426px);
-  --dot-padding-top: 28px;
-  --decorated-zone-bottom-padding-top: clamp(723px, calc(661.462px + 6.01vw), 748px);
-  --decorated-zone-top-padding-left: clamp(979px, calc(-106.538px + 106.01vw), 1420px);
-  --rec-padding-left: clamp(943px, calc(-140.077px + 105.769vw), 1383px);
-  --main-padding-top-bottom: 60px;
-  --main-padding-left-right: 20px;
-  --card-padding: 80px;
-  }
-
-  .header {
-    height: 100%;
-    grid-template-columns: 1fr calc(50% - 10px);
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: var(--header-padding) var(--header-padding) var(--header-padding) 0;
-  }
-
-  .header__decorated_rec {
-    grid-column: 1 / span 2;
-  }
-
-  .header__theme-menu {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    justify-self: center;
-    align-self: first baseline;
-    padding-top: 0;
-    padding-left: 10px;
-  }
-
-  .header__theme-menu-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     list-style-type: none;
-    inline-size: 230px;
-  }
+    inline-size: 70px;
+}
 
-  .header__theme-title {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    justify-self: left;
-    align-self: center;
-  }
+.header__theme-menu-button {
+    width: 70px;
+    height: 26px;
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: var(--text-font-size);
+    line-height: 18px;
+    color: var(--card-title-color);
+    text-transform: lowercase;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
 
-  .header__description {
-    grid-column: 2;
-    grid-row: 3;
-    letter-spacing: -0.2px;
-    padding-top: 60px;
-  }
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+    border-color: var(--menu-hover-color);
+    transition: border-color 0.6s;
+}
 
-  .card {
+.header__theme-menu-button_active {
+    border-color: var(--card-title-color);
+    transition: border-color 0.6s;
+}
+
+.header__theme-menu-item:has(:focus) .header__theme-menu-button {
+    outline: none;
+}
+
+.header__theme-menu-item:has(:focus-visible) .header__theme-menu-button {
+    border-bottom: 1px solid var(--card-title-color);
+}
+
+.header__theme-title {
+    align-self: self-start;
+    padding-top: 10px;
+}
+
+.header__title {
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 700;
+    font-size: var(--font-size-header-footer);
+    line-height: var(--line-height-header-footer);
+    color: var(--title-color);
+    text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.subtitle-decor {
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 700;
+    font-size: var(--text-font-size);
+    line-height: 23px;
+    color: var(--card-subtitle-color);
+    background-color: var(--accent-color);
+}
+
+.sections {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: var(--card-padding);
+    padding: var(--main-padding-top-bottom) var(--main-padding-left-right);
+}
+
+.section__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.section__title-decor {
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 700;
+    font-size: var(--text-font-size);
+    line-height: 23px;
+    color: var(--card-title-color);
+    padding-bottom: 20px;
+}
+
+.section__card_description {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-  }
+    list-style-type: none;
+}
 
-  .card__title-decor {
-    padding-bottom: 0;
-  }
+.section__card_description h4 {
+    font-weight: 400;
+}
 
-  .card__arrangement_of_elements_1 {
-    grid-column: 2 / span 2;
-  }
+.section__card p {
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: var(--text-font-size);
+    line-height: 23.44px;
+    color: var(--text-color);
+    padding-top: 10px;
+    text-align: left;
+}
 
-  .card__arrangement_of_elements_2 {
-    grid-column: 1 / span 3;
-  }
-
-  .card__arrangement_of_elements_2 .card__text {
+.section__images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
 
-  .card__arrangement_of_elements_3 {
-    grid-column: 2 / span 2;
-  }
+.images {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-  .card__images {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4 1fr);
-    gap: 20px;
-  }
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: var(--heder-min-height);
+    position: relative;
+}
 
-  .title__arrangement {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-  }
+.footer__title {
+    font-family: "IBM Plex mono", "Consolas", monospace;
+    font-weight: 700;
+    font-size: var(--font-size-header-footer);
+    line-height: var(--line-height-header-footer);
+    color: var(--title-color);
+    text-shadow: 2px 2px 0px var(--accent-color);
+}
 
-  .image__arrangement_nature {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-  }
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px var(--accent-color);
+}
 
-  .image__arrangement_food {
-    grid-column: 3;
-    grid-row: 2 / span 2;
-    object-fit: cover;
-  }
+.section__card:has(:focus) a {
+    outline: none;
+}
 
-  .image__arrangement_music {
-    grid-column: 1;
-    grid-row: 3 / span 2;
-    object-fit: cover;
-  }
+.section__card:has(:focus-visible) a {
+    border: 1px solid var(--text-color);
+}
 
-  .image__arrangement_walk {
-    grid-column: 2 / span 2;
-    grid-row: 4;
-  }
+.link:hover {
+    border-bottom: 1px solid var(--text-color);
+}
 
-  .image__arrangement_books {
-    grid-auto-flow: dense;
-  }
+@media (width >= 768px) {
+    :root {
+        --heder-min-height: 1024px;
+        --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        --line-height-header-footer: 99px;
+        --rec-padding-left: clamp(687px, calc(-81px + 100vw), 943px);
+        --main-padding-top-bottom: 60px;
+        --main-padding-left-right: 20px;
+        --card-padding: 80px;
+    }
+
+    .header {
+        grid-template-columns: 1fr calc(50% - 10px);
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: var(--header-padding) var(--header-padding) var(--header-padding) 0;
+    }
+
+    .header__decorated_rec {
+        grid-column: 1 / span 2;
+    }
+
+    .header__theme-menu {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .header__theme-title {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        justify-self: left;
+        align-self: center;
+    }
+
+    .header__description {
+        grid-column: 2;
+        grid-row: 3;
+        align-self: self-start;
+        padding-top: 49px;
+    }
+
+    .section__card {
+        display: grid;
+        grid-template-columns: minmax(240px, 1fr) 1fr 1fr;
+        gap: 20px;
+    }
+
+    .card__title-decor {
+        padding-bottom: 0;
+    }
+
+    .section-why__arrangement_of_elements {
+        grid-column: 2 / span 2;
+    }
+
+    .section-causes__arrangement_of_elements {
+        grid-column: 1 / span 3;
+    }
+
+    .section-advices__arrangement_of_elements {
+        grid-column: 2 / span 2;
+    }
+
+    .section__images {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+
+    .title__arrangement {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+
+    .image__arrangement_nature {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .image__arrangement_food {
+        grid-column: 3;
+        grid-row: 2 / span 2;
+        object-fit: cover;
+    }
+
+    .image__arrangement_music {
+        grid-column: 1;
+        grid-row: 3 / span 2;
+        object-fit: cover;
+    }
+
+    .image__arrangement_walk {
+        grid-column: 2 / span 2;
+        grid-row: 4;
+    }
+
+    .image__arrangement_books {
+        grid-auto-flow: dense;
+    }
+}
+
+@media (width >= 1024px) {
+    :root {
+        --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        --line-height-header-footer: 130px;
+        --heder-min-height: 768px;
+        --dot-padding-left: clamp(986px, calc(-97.077px + 105.769vw), 1426px);
+        --dot-padding-top: 28px;
+        --decorated-zone-bottom-padding-top: clamp(723px, calc(661.462px + 6.01vw), 748px);
+        --decorated-zone-top-padding-left: clamp(979px, calc(-106.538px + 106.01vw), 1420px);
+        --rec-padding-left: clamp(943px, calc(-140.077px + 105.769vw), 1383px);
+        --main-padding-top-bottom: 60px;
+        --main-padding-left-right: 20px;
+        --card-padding: 80px;
+    }
+
+    .header__theme-menu {
+        grid-column: 1 / span 2;
+        justify-self: center;
+        align-self: first baseline;
+        padding-top: 0;
+        padding-left: 10px;
+    }
+
+    .header__theme-menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        list-style-type: none;
+        inline-size: 230px;
+    }
+
+    .header__description {
+        letter-spacing: -0.2px;
+        padding-top: 60px;
+    }
+
+    .section__card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .section-causes__arrangement_of_elements {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
 }
