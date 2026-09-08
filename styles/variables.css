@@ -16,16 +16,35 @@
   --card-title-color: #FF0070;
   --card-subtitle-color: #000028;
   --menu-hover-color: rgba(255, 0, 112, 0.4);
-  --rec-padding-left: clamp(304px, calc(-61.458px + 97.455vw), 687px);
+  --rec-padding-right: clamp(38px, calc(28.458px + 2.545vw), 48px);
   --rec-padding-top: clamp(10px, 0.458px + 2.5445vw, 20px);
   --menu-padding-top: clamp(65px, calc(-37.099px + 27.226vw), 172px);
-  --dot-padding-left: clamp(347px, calc(-22.222px + 98.459vw), 986px);
-  --dot-padding-top: clamp(18px, 8.458px + 2.5445vw, 28px);
-  --decorated-zone-bottom-padding-top: clamp(633px, calc(302.847px + 88.041vw), 979px);
-  --decorated-zone-bottom-padding-left: clamp(10px, calc(0.458px + 2.545vw), 20px);
-  --decorated-zone-top-padding-left: clamp(340px, calc(-29.222px + 98.459vw), 979px);
-  --decorated-zone-top-padding-top: clamp(10px, calc(0.458px + 2.545vw), 20px);
+  --dot-padding: clamp(18px, 8.458px + 2.5445vw, 28px);
+  --decorated-zone-padding: clamp(10px, calc(0.458px + 2.545vw), 20px);
   --main-padding-top-bottom: clamp(40px, calc(20.916px + 5.089vw), 60px);
   --main-padding-left-right: clamp(10px, calc(0.458px + 2.545vw), 20px);
   --card-padding: clamp(50px, calc(21.374px + 7.634vw), 80px);
 }
+
+@media (width >= 768px) {
+    :root {
+        --heder-min-height: 1024px;
+        --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        --line-height-header-footer: 99px;
+        --main-padding-top-bottom: 60px;
+        --main-padding-left-right: 20px;
+        --card-padding: 80px;
+        --rec-padding-right: 28px;
+    }
+  }
+
+@media (width >= 1024px) {
+    :root {
+        --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+        --line-height-header-footer: 130px;
+        --heder-min-height: 768px;
+        --main-padding-top-bottom: 60px;
+        --main-padding-left-right: 20px;
+        --card-padding: 80px;
+    }
+  }

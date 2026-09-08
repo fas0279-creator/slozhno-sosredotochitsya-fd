@@ -18,8 +18,8 @@
 
 .header__decorated_rec {
     position: absolute;
-    inset-inline-start: var(--rec-padding-left);
-    inset-block-start: var(--rec-padding-top);
+    right: var(--rec-padding-right);
+    top: var(--rec-padding-top);
     font-family: "IBM Plex mono", "Consolas", monospace;
     font-weight: 400;
     font-size: 18px;
@@ -34,8 +34,8 @@
     position: absolute;
     width: 9px;
     height: 9px;
-    inset-inline-start: var(--dot-padding-left);
-    inset-block-start: var(--dot-padding-top);
+    top: var(--dot-padding);
+    right: var(--dot-padding);
     border-radius: 50%;
     background: var(--accent-color);
     box-shadow: 0px 0px 4px 2px var(--accent-color);
@@ -46,8 +46,8 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    inset-inline-start: var(--decorated-zone-bottom-padding-left);
-    inset-block-start: var(--decorated-zone-bottom-padding-top);
+    bottom: var(--decorated-zone-padding);
+    left: var(--decorated-zone-padding);
     border-width: 0px 0px 1px 1px;
     border-style: solid;
     border-color: var(--card-title-color);
@@ -58,8 +58,8 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    inset-inline-start: var(--decorated-zone-top-padding-left);
-    inset-block-start: var(--decorated-zone-top-padding-top);
+    top: var(--decorated-zone-padding);
+    right: var(--decorated-zone-padding);
     border-width: 1px 1px 0px 0px;
     border-style: solid;
     border-color: var(--card-title-color);
@@ -227,16 +227,6 @@
 }
 
 @media (width >= 768px) {
-    :root {
-        --heder-min-height: 1024px;
-        --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-        --line-height-header-footer: 99px;
-        --rec-padding-left: clamp(687px, calc(-81px + 100vw), 943px);
-        --main-padding-top-bottom: 60px;
-        --main-padding-left-right: 20px;
-        --card-padding: 80px;
-    }
-
     .header {
         grid-template-columns: 1fr calc(50% - 10px);
         grid-template-rows: 1fr 1fr 1fr;
@@ -327,20 +317,6 @@
 }
 
 @media (width >= 1024px) {
-    :root {
-        --font-size-header-footer: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-        --line-height-header-footer: 130px;
-        --heder-min-height: 768px;
-        --dot-padding-left: clamp(986px, calc(-97.077px + 105.769vw), 1426px);
-        --dot-padding-top: 28px;
-        --decorated-zone-bottom-padding-top: clamp(723px, calc(661.462px + 6.01vw), 748px);
-        --decorated-zone-top-padding-left: clamp(979px, calc(-106.538px + 106.01vw), 1420px);
-        --rec-padding-left: clamp(943px, calc(-140.077px + 105.769vw), 1383px);
-        --main-padding-top-bottom: 60px;
-        --main-padding-left-right: 20px;
-        --card-padding: 80px;
-    }
-
     .header__theme-menu {
         grid-column: 1 / span 2;
         justify-self: center;
